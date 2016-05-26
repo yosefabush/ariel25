@@ -18,7 +18,7 @@ function othername() {
    /*if the user already looged in sen him to the inset pin screen*/
    else  if(usersFromServer.length > 0 && usersFromServer[0].Arrived==1){
 	    localStorage.generalId=usersFromServer[0].UserId;
-		 alert (localStorage.generalId);
+		
 window.location.assign("pinCodePage.html");
 	   
    }
@@ -51,10 +51,31 @@ function aditionalDetails(){
 }
 /*checks if the pin that the user unserted is valid if yes starts the game*/
 function Play(){
+	
 	var PinCode = $("#pinCode").val();
 	var id= localStorage.generalId;
-$.get( "PinEnter.php?PinCode=" + PinCode+"&userID=" + id, function( data ) {
-       alert("game started "+ id);
-    }); 
-	
+
+	$.get( "PinEnter.php?PinCode="+PinCode+"&userID="+id, function( data )
+	 {	 
+	 //var PinCode = $("#pinCode").val();
+	//var id= localStorage.generalId;
+		     var GameFromServer = $.parseJSON(data);
+
+			if(GameFromServer.length > 0 && GameFromServer[0].Id == PinCode){
+				//localStorage.setItem("generalGameNumber", "GameFromServer[0].UserId");
+				
+				$.get( "PinEnter.php?PinCode=" + PinCode+"&userID=" + id, function( data ) {
+                alert("game started "+ id);
+				
+				
+			
+				//alert(localStorage.getItem("generalGameNumber", "GameFromServer[0].UserId"));
+                 });	
+			}
+			
+			else{
+				alert("The game you entered does not exists!");
+			}
+	}); 
+
 }
