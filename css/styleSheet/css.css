@@ -2,26 +2,58 @@ body{
     margin: 0px;
     padding: 0px;
      /*background-color: #41b4e6;*/
+    background-image: url("../../images/backImage.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    direction: rtl;
+}
+.hide{
+    visibility: hidden;
 }
 h1 { 
    text-align: center;
     
 }
+#headerTop{
+    background-color: #1abfdf;
+    border-bottom: 5px solid;
+    border-bottom-color: black;
+}
 #centerBox
 {
-     background-color: #41464b;
+    background-color: #a5a598;
     width: 300px;
-    border-radius:2%;
+    border: 5px solid;
+    border-radius:5%;
     padding-right: 0px;
     padding-left: 0px;
     padding-bottom: 20px;
     padding-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#centerBoxTxt{
+    text-align: center;
+    font-size: 30px;
+    font-family: gisha;
+}
+.main{
+    text-align: center;
 }
 input{
     text-align: center;
 }
-#submitButton{
-    margin-left: 20%;
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 footer{
     float: center;
@@ -37,21 +69,18 @@ footer{
 padding: 0px;
   width: 0; 
   height: 0; 
-  border-top: 60px solid transparent;
-  /*border-bottom: 60px solid transparent;*/
-  border-left: 60px solid white;
+  border-top: 104px solid transparent;
+  border-left: 104px solid white;
 transform: rotate(-90deg);
     background-color: #41464b;
      float: right; 
 }
 img{
-    margin-left: 25%;
+    margin-left: 0%;
+    clear: both;
 }
-#textColor{
-    color: #41464b;
-}
-#textColor2{
-    color: #57faff;
+#image{
+    margin-right: 24%;
 }
 #txt{
  overflow: hidden;
@@ -60,6 +89,12 @@ img{
     font-size: 50px;
     padding-left: 125px;
     font-family: oemeodedpashutpro-regular-webfont;
+}
+#topTxt{
+    text-align: center;
+    font-size: 50px;
+    font-family: gisha;
+    
 }
 @media only screen and (max-width: 360px) {
 
@@ -75,16 +110,40 @@ footer>.container-fluid{
     margin-left: 0px;
 }
 .formStyle{
-    margin-left: 25%;
+    margin-left: 0%;
 }
-@font-face {
+/*@font-face {
     font-family: 'oemeodedpashutpro-regular-webfont';
     src: url('../font/oemeodedpashutpro-regular-webfont.ttf');
     font-weight: normal;
     font-style: normal;
+}*/
+@font-face {
+    font-family: gisha;
+    src: url('../font/gisha.ttf');
+}
+#textColor{
+    color: #41464b;
+    float: right;
+}
+#textColor2{
+    color: #57faff;
+    float: right;
+}
+.botton{
+    background-color: #41b4e6;
+    bottom: 0px;
+    border: 3px solid;
+    border-radius: 15%;
+    box-shadow: 1px 2px 6px #000;
 }
 .bottom{
-    background-color: #41b4e6;
-    position: fixed;
+    background-color: #1abfdf;
     bottom: 0px;
+    border-top: 5px solid;
+    position: fixed;
+}
+footer>div>div>.col-md-3{
+    padding-left: 0px;
+    padding-right: 0px;
 }

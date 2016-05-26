@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -6,32 +6,51 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <meta charset="utf-8" />
 <title>GAME</title>
-     <link rel="stylesheet" type="text/css" href="css\styleSheet\css.css">   
+     <link rel="stylesheet" type="text/css" href="css\styleSheet\css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 </head>
 
 <body >
-    <header>
+    <header id="headerTop">
    <div class="container-fluid">
-    <h1 >!ברוכים הבאים</h1>
+    <h1 id="topTxt">ברוכים הבאים!</h1>
 </div>
  </header>
     
-    <div id=centerBox class="container-fluid">
-    <span id="image"><img src="ProjectLogo.png"></span>
+    <div id="centerBox" class="First container-fluid">
+    <span id="text"></span>
+        <div class="main">
+            <span id="centerBoxTxt">הרשמה<br>הכנס תעודת זהות</span>
+            <form class="formStyle">
+                <input type="text" placeholder="הכנס תעודת זהות" id="fname"><br><br>
+                <input class="botton" type="button" value="אימות סטודנט"  onclick="othername();">
+            </form>
+        </div>
+    </div>
+    <div id="centerBox" class="Second container-fluid hide">
         <div class="main">
             <form class="formStyle">
-                <input type="text" placeholder="הכנס תעודת זהות" id="fname"><br>
-                <input id="submitButton" type="button" value="התחבר"  onclick="othername();">
+                <span id="centerBoxTxt">שלום משתמש</span>
+                <input type="text" placeholder="הכנס שם משתמש למשחק" id="usernmae"><br>
+                <input type="checkbox" name="work"  id="WorkCheck"> האם עובד<br>
+                <input type="text" placeholder="מקום העבודה" id="job1" ><br>
+                <input type="text" placeholder="תפקיד" id="job2" ><br>
+                <input id="submitButton" type="button" value="השלם הרשמה"  onclick="aditionalDetails();">
             </form>
+        </div>
+    </div>
+    <div id="centerBox" class="Third container-fluid hide">
+    <span id="image"><img src="ProjectLogo.png"></span>
+        <div class="main">
+            פרטיך התקבלו בהצלחה נתראה בטקס!
         </div>
     </div>
    <footer class="col-md-12 bottom">
        <div class="container-fluid" >
-       <div class="row col-md-12">
-       
-       <div class="col-md-11 " id=txt><span id="textColor"><b>הנדסאים</b></span> <span id="textColor2">אריאל</span></div>
-           
-       <div class="arrow-right container-fluid col-md-1">
+        <div class="row col-md-12">
+           <img src="images/BottomLogo.png" class="col-md-3">
+           <div class="col-md-8 " id=txt><span id="textColor"><b>הנדסאים</b></span><br> <span id="textColor2">אריאל</span></div>   
+           <div class="arrow-right container-fluid col-md-1">
         </div>
             </div>          
 

@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script>
+			function checkLogin() {
+				var id = $("#tz").val();
+				
+				$.get( "Login.php?userId=" + id, function( data ) {
+				   var usersFromServer = $.parseJSON(data);
+				   
+				   if (usersFromServer.length > 0) {
+						alert ('hi'+usersFromServer[0].FristName);
+				   } else {
+						alert ('bad');
+				   }
+				   
+				
+			   }); 
+			}
+		</script>
+	</head>
+	<body>
+		<input id="tz" />
+		<button onclick="checkLogin()">Click</button>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+body{
+    margin: 0px;
+    padding: 0px;
+     background-color: #41b4e6;
+}
+h1 { 
+   text-align: center;
+    
+}
+#centerBox
+{
+     background-color: #41464b;
+    width: 300px;
+    border-radius:2%;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+input{
+    text-align: center;
+}
+#submitButton{
+    margin-left: 20%;
+}
+footer{
+    float: center;
+      overflow: hidden;
+    line-height: 1;
+}
+.col-md-12{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.arrow-right {
+ margin: 0px;
+padding: 0px;
+  width: 0; 
+  height: 0; 
+  border-top: 60px solid transparent;
+  /*border-bottom: 60px solid transparent;*/
+  border-left: 60px solid white;
+transform: rotate(-90deg);
+    background-color: #41464b;
+     float: right; 
+}
+img{
+    margin-left: 25%;
+}
+#textColor{
+    color: #41464b;
+}
+#textColor2{
+    color: #57faff;
+}
+#txt{
+ overflow: hidden;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    padding-left: 125px;
+    font-family: oemeodedpashutpro-regular-webfont;
+}
+@media only screen and (max-width: 360px) {
+
+   #txt { font-size: 8em; }
+
+}
+footer>.container-fluid{
+    padding-left: 0px;
+    padding-right:0px;
+}
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.formStyle{
+    margin-left: 25%;
+}
+@font-face {
+    font-family: 'oemeodedpashutpro-regular-webfont';
+    src: url('../font/oemeodedpashutpro-regular-webfont.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
