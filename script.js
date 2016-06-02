@@ -55,6 +55,10 @@ function aditionalDetails(){
 function Play(){
 	
 	var PinCode = $("#pinCode").val();
+    
+    if (PinCode.trim().length == 0)
+        return;
+    
 	var id= localStorage.generalId;
 
 	$.get( "PinEnter.php?PinCode="+PinCode+"&userID="+id, function( data )
@@ -67,9 +71,11 @@ function Play(){
 				//localStorage.setItem("generalGameNumber", "GameFromServer[0].UserId");
 				
 				$.get( "PinEnter.php?PinCode=" + PinCode+"&userID=" + id, function( data ) {
-                alert("game started "+ id);
+                // alert("game started "+ id);
 				
-				
+				// TODO: REDIRECT TO ASSAF
+                localStorage.PinCode = PinCode.trim();
+                window.location = "../../ariel25_Game/ariel25_Game/Hackaton/";
 			
 				//alert(localStorage.getItem("generalGameNumber", "GameFromServer[0].UserId"));
                  });	
