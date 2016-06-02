@@ -1,7 +1,6 @@
 <?php
     try{
-		// alex.php?pwd=dsdsd&username=65964&address=fjelgd
-        $db = new PDO('mysql:host=209.188.15.35;dbname=effeecom_Ariel25_DB','effeecom','eff23130');	
+		include_once('db.php');
             
 			$userId=$_GET['userID'];
 			$username = $_GET['username'];

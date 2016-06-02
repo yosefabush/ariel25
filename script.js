@@ -4,6 +4,9 @@ function othername() {
 
 	var id = $("#fname").val();
 
+    if (id.trim().length == 0) {
+        return;
+    }
  
 	$.get( "Login.php?userId=" + id, function( data ) {
 				   var usersFromServer = $.parseJSON(data);
@@ -12,8 +15,7 @@ function othername() {
         $(".First").addClass("hide").append();
         $(".Second").removeClass("hide");
 		
-		alert ('HI ' + usersFromServer[0].FirstName);
-		
+        $(".Second #centerBoxTxt").text("שלום " + usersFromServer[0].FirstName);		
    }
    /*if the user already looged in sen him to the inset pin screen*/
    else  if(usersFromServer.length > 0 && usersFromServer[0].Arrived==1){
@@ -32,17 +34,17 @@ window.location.assign("pinCodePage.html");
  
 function aditionalDetails(){
     var userName = $("#usernmae").val();
-    var job = $("#job1").val();
-    var workPlace = $("#job2").val();
+    var job = $("#job2").val();
+    var workPlace = $("#job1").val();
     var id = $("#fname").val();
 
 	var isInFeild = 0;
 	if ($('#WorkCheck').is(':checked')) {
 		isInFeild = 1;
 	}
-	  alert(isInFeild);
+	  
 	$.get( "SignUp.php?username=" + userName + "&job=" + job + "&workPlace=" + workPlace + "&isInField=" + isInFeild+"&userID="+id, function( data ) {
-       alert("Saved");
+       alert("נרשמת בהצלחה");
     }); 
 	
      $(".Second").addClass("hide").append();
