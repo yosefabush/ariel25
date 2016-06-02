@@ -117,7 +117,10 @@ input[type=checkbox]
     #centerBox{margin-top: 30%;margin-bottom: 50%;padding-top: 15%;padding-bottom: 15%;}
     input{font-size: 45px;}
     input[type=button]{margin-top: 5%;}
-    #WorkCheck{font-size: 30px;}
+    #WorkCheck{font-size: 40px;}
+    .main{font-size: 45px;}
+    #image{display: block;}
+    .EndRegistrationImg{ display: block;width: 50%;height: auto;margin: auto;}
 }
 footer>.container-fluid{
     padding-left: 0px;
