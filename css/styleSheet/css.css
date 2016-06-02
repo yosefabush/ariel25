@@ -1,10 +1,9 @@
 body{
     margin: 0px;
     padding: 0px;
-     /*background-color: #41b4e6;*/
     background-image: url("../../images/backImage.png");
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y,repeat-x;
     direction: rtl;
 }
 .hide{
@@ -14,6 +13,10 @@ h1 {
    text-align: center;
     
 }
+img {
+    max-width: 50%;
+    height: auto;
+}
 #headerTop{
     background-color: #1abfdf;
     border-bottom: 5px solid;
@@ -22,20 +25,23 @@ h1 {
 #centerBox
 {
     background-color: #a5a598;
-    width: 300px;
+    width: 80%;
     border: 5px solid;
     border-radius:5%;
     padding-right: 0px;
     padding-left: 0px;
     padding-bottom: 20px;
     padding-top: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
 #centerBoxTxt{
     text-align: center;
     font-size: 30px;
     font-family: gisha;
+}
+#WorkCheck{
+    padding-right: 10px;
 }
 .main{
     text-align: center;
@@ -63,6 +69,7 @@ footer{
 .col-md-12{
     padding-left: 0px;
     padding-right: 0px;
+    width: 100%
 }
 .arrow-right {
  margin: 0px;
@@ -75,31 +82,42 @@ transform: rotate(-90deg);
     background-color: #41464b;
      float: right; 
 }
-img{
-    margin-left: 0%;
-    clear: both;
-}
-#image{
-    margin-right: 24%;
-}
 #txt{
  overflow: hidden;
     text-align: center;
     color: black;
-    font-size: 50px;
-    padding-left: 125px;
+    font-size: 3.5em;
     font-family: oemeodedpashutpro-regular-webfont;
 }
 #topTxt{
     text-align: center;
-    font-size: 50px;
+    font-size: 100px;
     font-family: gisha;
     
 }
-@media only screen and (max-width: 360px) {
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(3); /* IE */
+  -moz-transform: scale(3); /* FF */
+  -webkit-transform: scale(3); /* Safari and Chrome */
+  -o-transform: scale(3); /* Opera */
+  margin: 10px;
+}
+@media only screen and (min-width: 768px) {
 
-   #txt { font-size: 8em; }
-
+    [class*="col-md-12"] {width: 980px;}
+    #txt { font-size: 2em;margin-left: 220px; }
+    .col-md-8{width: 30%;}
+    .arrow-right{border-top:52px solid transparent;border-left: 52px solid white;}
+    .float-left{height: 103px;margin-right: 56px;}
+    .float-right{ height: 90px;}
+    .col-md-12{width: 100%;}
+    #centerBoxTxt{font-size: 70px;}
+    #centerBox{margin-top: 30%;margin-bottom: 50%;padding-top: 15%;padding-bottom: 15%;}
+    input{font-size: 45px;}
+    input[type=button]{margin-top: 5%;}
+    #WorkCheck{font-size: 30px;}
 }
 footer>.container-fluid{
     padding-left: 0px;
@@ -112,12 +130,6 @@ footer>.container-fluid{
 .formStyle{
     margin-left: 0%;
 }
-/*@font-face {
-    font-family: 'oemeodedpashutpro-regular-webfont';
-    src: url('../font/oemeodedpashutpro-regular-webfont.ttf');
-    font-weight: normal;
-    font-style: normal;
-}*/
 @font-face {
     font-family: gisha;
     src: url('../font/gisha.ttf');
@@ -130,7 +142,11 @@ footer>.container-fluid{
     color: #57faff;
     float: right;
 }
-.botton{
+footer{
+    max-width: 100%;
+    height: auto;
+}
+input[type=button]{
     background-color: #41b4e6;
     bottom: 0px;
     border: 3px solid;
@@ -146,4 +162,13 @@ footer>.container-fluid{
 footer>div>div>.col-md-3{
     padding-left: 0px;
     padding-right: 0px;
+}
+.col-md-8{
+    width: 90%;
+}
+.float-left{
+    float:left; 
+}
+.float-right{
+    float: right;
 }
