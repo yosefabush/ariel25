@@ -3,60 +3,87 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <meta charset="utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<meta charset="utf-8"/>
 <title>GAME</title>
-     <link rel="stylesheet" type="text/css" href="css\styleSheet\css.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css\styleSheet\css.css">
+    <script     src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 </head>
 
-<body >
+<body class="container-fluid">
+    <div class="row">
     <header id="headerTop">
    <div class="container-fluid">
     <h1 id="topTxt">ברוכים הבאים!</h1>
 </div>
  </header>
-    
-    <div id="centerBox" class="First container-fluid">
+
+<!-- Space between rows -->
+<div class="row space"></div>
+
+<div class="row First">
+    <div class="col-md-6 col-md-offset-3">
+    <div id="centerBox">
+
     <span id="text"></span>
         <div class="main">
             <span id="centerBoxTxt">הרשמה<br>הכנס תעודת זהות</span>
             <div class="formStyle">
                 <input type="text" placeholder="הכנס תעודת זהות" id="fname"><br><br>
-                <input class="botton" type="button" value="אימות סטודנט"  onclick="othername();">
+                <input class="button" type="button" value="אימות סטודנט"  onclick="othername();">
             </div>
         </div>
     </div>
-    <div id="centerBox" class="Second container-fluid hide">
-        <div class="main">
+    </div>
+</div>
+    <div id="centerBox" class="Second container hide">
+        <div class="main row col-md-6 col-md-offset-3">
             <form class="formStyle">
+                <div class="col-md-12">
                 <span id="centerBoxTxt">שלום משתמש</span>
-                <input type="text" placeholder="הכנס שם משתמש למשחק" id="usernmae"><br>
-                <input type="checkbox" name="work"><span id="WorkCheck">האם עובד</span><br>
-                <input type="text" placeholder="מקום העבודה" id="job1" ><br>
-                <input type="text" placeholder="תפקיד" id="job2" ><br>
-                <input id="submitButton" type="button" value="השלם הרשמה" onclick="aditionalDetails();">
+                </div>
+                <div class="col-md-12">
+                <input type="text" placeholder="הכנס שם משתמש למשחק" id="usernmae">
+                </div>
+                <div class="row SmallSpace"></div>
+                <div class="col-md-12">
+                <input id="WorkCheck" type="checkbox" name="work">
+                <label for="WorkCheck">האם עובד ?</label>
+                </div>
+                <div class="col-md-12">
+                <input type="text" placeholder="מקום העבודה" id="job1" >
+                </div>
+                <div class="row SmallSpace"></div>
+                <div class="col-md-12">
+                <input type="text" placeholder="תפקיד" id="job2" >
+                </div>
+                <div class="row SmallSpace"></div>
+                <div class="col-md-12">
+                <input id="submitButton" class="button" type="button" value="השלם הרשמה" onclick="aditionalDetails();">
+                </div>
             </form>
         </div>
     </div>
-    <div id="centerBox" class="Third container-fluid hide">
+    <div id="centerBox" class="Third container hide">
+        <div class="row">
         <div id="image"><img src="ProjectLogo.png" class="EndRegistrationImg">
             <div class="main">
                 פרטיך התקבלו בהצלחה נתראה בטקס!
             </div>
         </div>
+        </div>
     </div>
-   <footer class="col-md-12 bottom">
-       <div class="container-fluid" >
-        <div class="row col-md-12">
+</div>
+   <footer class="container-fluid">
+       <div class="row">
+       <div class="bottom clearfix col-md-12" >
           <img src="images/BottomLogo.png" class="float-left" >
             <img src="images/HandesaimArielLogo.png" class="float-right">
-           <div class="arrow-right container-fluid col-md-1 hide">
-        </div>
-            </div>          
-
+        </div> 
        </div>
     </footer>
+
  <script src="script.js"></script> 
+
 </body>
 </html>
