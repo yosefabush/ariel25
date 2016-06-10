@@ -39,10 +39,10 @@ function aditionalDetails(){
     var id = $("#fname").val();
 
 	var isInFeild = 0;
-	if ($('#WorkCheck').is(':checked')) {
+    if ($('#iswork').is(':checked')) {
 		isInFeild = 1;
 	}
-	  
+	alert(isInFeild);  
 	$.get( "SignUp.php?username=" + userName + "&job=" + job + "&workPlace=" + workPlace + "&isInField=" + isInFeild+"&userID="+id, function( data ) {
        alert("נרשמת בהצלחה");
     }); 

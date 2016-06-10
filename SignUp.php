@@ -4,11 +4,11 @@
             
 			$userId=$_GET['userID'];
 			$username = $_GET['username'];
-            $job = $_GET['job'];
+            $job = $_GET['job']; // position
             $workPlace = $_GET['workPlace'];
             $isInField = $_GET['isInField'];
            
-			$sql = "UPDATE users SET Arrived=1, NickName='$username', WorkInField='$isInField',WorkPlace= '$workPlace'
+			$sql = "UPDATE users SET Arrived=1, NickName='$username', WorkInField='$isInField',WorkPlace= '$workPlace',Position = '$job'
                 WHERE userId='$userId'";
             
             $insert  = $db->exec($sql);
