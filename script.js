@@ -75,7 +75,7 @@ function Play(){
 				
 				// TODO: REDIRECT TO ASSAF
                 localStorage.PinCode = PinCode.trim();
-                window.location = "../../ariel25_Game/ariel25_Game/Hackaton/";
+                window.location = "../../ariel25_Game/Hackaton/";
 			
 				//alert(localStorage.getItem("generalGameNumber", "GameFromServer[0].UserId"));
                  });	
