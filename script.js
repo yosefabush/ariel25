@@ -39,10 +39,10 @@ function aditionalDetails(){
     var id = $("#fname").val();
 
 	var isInFeild = 0;
-	if ($('#WorkCheck').is(':checked')) {
+    if ($('#iswork').is(':checked')) {
 		isInFeild = 1;
 	}
-	  
+	alert(isInFeild);  
 	$.get( "SignUp.php?username=" + userName + "&job=" + job + "&workPlace=" + workPlace + "&isInField=" + isInFeild+"&userID="+id, function( data ) {
        alert("נרשמת בהצלחה");
     }); 
@@ -75,7 +75,7 @@ function Play(){
 				
 				// TODO: REDIRECT TO ASSAF
                 localStorage.PinCode = PinCode.trim();
-                window.location = "../../ariel25_Game/ariel25_Game/Hackaton/";
+                window.location = "../../ariel25_Game/Hackaton/";
 			
 				//alert(localStorage.getItem("generalGameNumber", "GameFromServer[0].UserId"));
                  });	
