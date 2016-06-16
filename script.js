@@ -1,3 +1,5 @@
+var PinCode;
+
 /*checks if the student/user exists in data base*/
 
 function othername() {
@@ -21,8 +23,7 @@ function othername() {
    else  if(usersFromServer.length > 0 && usersFromServer[0].Arrived==1){
 	    localStorage.generalId=usersFromServer[0].UserId;
 		
-window.location.assign("pinCodePage.html");
-	   
+        window.location.assign("pinCodePage.html");
    }
    /*if the user doesn't exist in the db*/
    else
@@ -42,22 +43,56 @@ function aditionalDetails(){
     if ($('#iswork').is(':checked')) {
 		isInFeild = 1;
 	}
-	alert(isInFeild);  
+	//alert(isInFeild);  
 	$.get( "SignUp.php?username=" + userName + "&job=" + job + "&workPlace=" + workPlace + "&isInField=" + isInFeild+"&userID="+id, function( data ) {
-       alert("נרשמת בהצלחה");
+         
     }); 
 	
      $(".Second").addClass("hide").append();
         $(".Third").removeClass("hide");
+    setTimeout(redirect,5000);   
     
 }
+
+function redirect() {
+    
+        window.location.assign("pinCodePage.html");
+}
+
+function logout() {
+    //localStorage.generalId = null; 
+    window.location.assign("index.html");
+}
+
 /*checks if the pin that the user unserted is valid if yes starts the game*/
 function Play(){
-	
-	var PinCode = $("#pinCode").val();
+	PinCode = $("#pinCode").val();
     
     if (PinCode.trim().length == 0)
         return;
+    $.ajax({
+        type: "GET",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        url: "../ariel25_Game/Hackaton/getGameInfo.php?req=getGameInfo&gameId=" + PinCode.trim() ,
+        success : function(d) {
+            var data = JSON.parse(d);
+            if(data[0].Status != 0){
+                forwardToGame();
+            }else{
+                alert("Game not started yet...");
+            }
+
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+        }
+    });
+    
+    
+    
+    
+}
+
+function forwardToGame() {
     
 	var id= localStorage.generalId;
 
@@ -75,7 +110,7 @@ function Play(){
 				
 				// TODO: REDIRECT TO ASSAF
                 localStorage.PinCode = PinCode.trim();
-                window.location = "../../ariel25_Game/Hackaton/";
+                window.location = "../ariel25_Game/Hackaton/game.html";
 			
 				//alert(localStorage.getItem("generalGameNumber", "GameFromServer[0].UserId"));
                  });	
