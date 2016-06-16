@@ -13,32 +13,30 @@
 <body >
     <header id="headerTop">
    <div class="container-fluid">
-       <div class="row">
     <h1 id="topTxt">ברוכים הבאים!</h1>
 </div>
-</div>
  </header>
-    <div class="row space"></div>
-    <div id="centerBox" class="First container">
-    <div class="row">
+    
+    <div id="centerBox" class="First container-fluid">
     <span id="text"></span>
         <div class="main">
             <span id="centerBoxTxt">Pin Code</span>
             <div class="formStyle">
                 <input type="text" placeholder="הכנס Pin code" id="pinCode"><br><br>
-                <input class="button" type="button" value="התחל משחק!"  onclick="Play();">
+                <input class="botton" type="button" value="התחל משחק!"  onclick="Play();"> 
+                <input class="botton" type="button" value="החלף משתמש"  onclick="logout();">
+
             </div>
         </div>
-        </div>
     </div>
-   <footer class="container-fluid bottom clearfix">
-       <div class="row" >
-        <div class="col-md-12 clearfix">
+   <footer class="col-md-12 bottom">
+       <div class="container-fluid" >
+        <div class="row col-md-12">
           <img src="images/BottomLogo.png" class="float-left" >
             <img src="images/HandesaimArielLogo.png" class="float-right">
            <div class="arrow-right container-fluid col-md-1 hide">
         </div>
-        </div>          
+            </div>          
 
        </div>
     </footer>
