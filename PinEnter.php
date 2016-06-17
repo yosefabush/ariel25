@@ -8,7 +8,7 @@
 		$resultSet = $db->query("SELECT * FROM games WHERE Id= + '$jsPinCode'")->fetchAll(PDO::FETCH_ASSOC);
 		echo(json_encode($resultSet));
 		
-		$sql = "UPDATE users SET CurrentGame = '$jsPinCode', CurrentGame_loginTime=NOW() WHERE UserId='$userId'";
+		$sql = "UPDATE users SET CurrentGame = '$jsPinCode', CurrentGame_loginTime=NOW(), Score = 0 WHERE UserId='$userId'";
 		$insert  = $db->exec($sql);  
             
             if( $insert !== FALSE ) {
