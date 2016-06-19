@@ -17,38 +17,60 @@
 </div>
  </header>
     
-    <div id="centerBox" class="First container-fluid">
-    <span id="text"></span>
-        <div class="main">
-            <span id="centerBoxTxt">הרשמה<br>הכנס תעודת זהות</span>
-            <div class="formStyle">
-                <input type="text" placeholder="הכנס תעודת זהות" id="fname"><br><br>
-                <input class="botton" type="button" value="אימות סטודנט"  onclick="othername();">
+    <div class="space"></div>
+    
+    <div id="centerBox" class="First container">
+        <div class="row">
+            <div class="col-md-12">
+                <span id="text"></span>
+                <div class="main">
+                    <span id="centerBoxTxt">הרשמה<br>הכנס תעודת זהות</span>
+                    <div class="formStyle">
+                        <input type="text" placeholder="הכנס תעודת זהות" id="fname"><br><br>
+                        <input class="botton" type="button" value="אימות סטודנט"  onclick="othername();">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div id="centerBox" class="Second container-fluid hide">
-        <div class="main">
-            <form class="formStyle">
-                <span id="centerBoxTxt">שלום משתמש</span>
-                <input type="text" placeholder="הכנס שם משתמש למשחק" id="usernmae"><br>
-                <input type="checkbox" name="work" id="iswork"><span id="WorkCheck">האם עובד בתחום הלימודים</span><br>
-                <input type="text" placeholder="מקום העבודה" id="job1" ><br>
-                <input type="text" placeholder="תפקיד" id="job2" ><br>
-                <input id="submitButton" type="button" value="השלם הרשמה" onclick="aditionalDetails();">
+    <div id="centerBox" class="Second container hide">
+        <div class="main row">
+            <form class="formStyle col-md-12">
+                <div class="row">
+                    <span id="centerBoxTxt">שלום משתמש</span>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="הכנס שם משתמש למשחק" id="usernmae"><br>
+                </div>
+                <div class="row">
+                    <input type="checkbox" name="work" id="iswork"><span id="WorkCheck">האם עובד בתחום הלימודים</span><br>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="מקום העבודה" id="job1" ><br>
+                </div>
+                <div class="row">
+                    <input type="text" placeholder="תפקיד" id="job2" ><br>
+                </div>
+                <div class="Smallspace"></div>
+                <div class="row">
+                    <input id="submitButton" type="button" value="השלם הרשמה" onclick="aditionalDetails();">
+                </div>
             </form>
         </div>
     </div>
-    <div id="centerBox" class="Third container-fluid hide">
-        <div id="image"><img src="ProjectLogo.png" class="EndRegistrationImg">
-            <div class="main">
+    <div id="centerBox" class="Third container hide">
+        <div id="image" class="row">
+            <div class="col-md-12">
+                <img src="ProjectLogo.png" class="EndRegistrationImg center-block">
+            </div>
+            <div id="successRegistration" class="main col-md-12">
                 נרשמת בהצלחה הנך מועבר לדף המשחק...
             </div>
         </div>
     </div>
-   <footer class="col-md-12 bottom">
+   <footer class="row bottom">
        <div class="container-fluid" >
-        <div class="row col-md-12">
+        <div class="row">
           <img src="images/BottomLogo.png" class="float-left" >
             <img src="images/HandesaimArielLogo.png" class="float-right">
            <div class="arrow-right container-fluid col-md-1 hide">

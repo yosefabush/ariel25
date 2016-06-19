@@ -161,3 +161,7 @@ input[type=button]{
 .float-right{
     float: right;
 }
+
+#successRegistration{
+    font-size: 150%;
+}
